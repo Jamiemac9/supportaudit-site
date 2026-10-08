@@ -1,0 +1,19 @@
+# Support Audit
+
+> Support Audit is an independent audit service for supported exempt and transitional housing in England, auditing resident support files for Registered Providers and managing agents and rating each file Gold, Green, Amber or Red.
+
+Every finding names the document, the date and what good looks like. Software does the first pass; an experienced auditor reviews every finding and sets every grade.
+
+## Services
+- [Audits](https://supportaudit.co.uk/audits/): Mock Audit, audit rounds and monitoring, compared side by side, with the full checklist and the rating key
+- [Use cases](https://supportaudit.co.uk/use-cases/): nine situations where providers use an independent audit
+
+## Guides
+- [Supported housing licensing explained](https://supportaudit.co.uk/resources/supported-housing-licensing/): the Supported Housing (Regulatory Oversight) Act 2023, the National Supported Housing Standards, who needs a licence and when
+- [What a good resident support file contains](https://supportaudit.co.uk/resources/resident-support-file/): the ten core documents, common gaps and a self-check
+- [Resources](https://supportaudit.co.uk/resources/): quick answers, key dates, a 22-term glossary and primary sources
+
+## About and contact
+- [About and approach](https://supportaudit.co.uk/about/): founder, method and data protection
+- [Book a discovery call](https://supportaudit.co.uk/book-a-call/)
+- Email: hello@supportaudit.co.uk
