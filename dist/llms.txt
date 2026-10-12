@@ -1,0 +1,19 @@
+# SEA Audit
+
+> SEA Audit is an independent audit service for supported exempt accommodation (SEA) and transitional supported housing in England. It audits resident support files for Registered Providers and managing agents and rates each file Gold, Green, Amber or Red, with the reason for every rating.
+
+Audits are desktop reviews of resident records, carried out remotely or at the provider's office. Every finding names the document, the date and what good looks like. An experienced auditor makes every judgement and sets every grade. Based in Solihull, West Midlands; serving England.
+
+## Services
+- [Audits](https://seaaudit.com/audits/): Mock Audit, audit rounds and monitoring compared, the full checklist, the rating key and how audits map to the National Supported Housing Standards
+- [Use cases](https://seaaudit.com/use-cases/): nine situations where providers use an independent audit
+
+## Guides
+- [Supported housing licensing explained](https://seaaudit.com/resources/supported-housing-licensing/): the Supported Housing (Regulatory Oversight) Act 2023, the National Supported Housing Standards, who needs a licence and when
+- [What a good resident support file contains](https://seaaudit.com/resources/resident-support-file/): the ten core documents, common gaps and a self-check
+- [Resources](https://seaaudit.com/resources/): quick answers, key dates, a 22-term glossary and primary sources
+
+## About and contact
+- [About and approach](https://seaaudit.com/about/): founder, method and data protection
+- [Book a discovery call](https://seaaudit.com/book-a-call/)
+- Email: hello@seaaudit.com

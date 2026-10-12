@@ -1,0 +1,13 @@
+{
+  "name": "seaaudit-site",
+  "private": true,
+  "description": "seaaudit.com static site",
+  "scripts": {
+    "build": "python3 tools/build.py",
+    "serve": "python3 -m http.server 8080 --directory dist"
+  },
+  "devDependencies": {
+    "esbuild": "0.24.0",
+    "html-minifier-terser": "7.2.0"
+  }
+}

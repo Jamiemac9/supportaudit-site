@@ -1,0 +1,28 @@
+# seaaudit.com
+User-agent: *
+Allow: /
+Disallow: /404
+
+# AI search and answer assistants (lets them cite the site)
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: Claude-User
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Bingbot
+Allow: /
+
+# Model training crawlers. Change Allow to Disallow to opt out.
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://seaaudit.com/sitemap.xml
