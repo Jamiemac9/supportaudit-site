@@ -25,7 +25,8 @@ NODE_BIN = os.environ.get('NODE_BIN', os.path.join(ROOT, 'node_modules', '.bin')
 DOMAIN = 'https://seaaudit.com'
 BRAND = 'SEA Audit'
 EMAIL = 'hello@seaaudit.com'
-TODAY = '2026-10-12'
+TODAY = '2026-11-09'
+MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December']
 PUBLISHED = '2026-10-08'
 GA_ID = 'G-4KW5S92V6Z'
 BING_VERIFY = ''      # optional: content of the msvalidate.01 meta tag from Bing Webmaster Tools
@@ -57,6 +58,11 @@ PAGES = {
         headline='What a good resident support file contains',
         title='What a Good Resident Support File Contains | SEA Audit',
         desc='The ten core documents in a supported housing resident support file, what auditors look for, the most common gaps and a free self-check.'),
+    'guide-awaabs-law-support-records': dict(url='/resources/awaabs-law-support-records/', nav='/resources/', type='Article', published='2026-11-09',
+        crumbs=[('Resources', '/resources/'), ("Awaab's Law and support records", '/resources/awaabs-law-support-records/')],
+        headline="Awaab's Law Phase 2: when a support note starts the clock",
+        title="Awaab's Law Phase 2 Timescales for Supported Housing",
+        desc="Does Awaab's Law apply to supported housing? Phase 2 starts 30 November 2026. Who is in scope, when the clock starts and how support staff should log hazards."),
     'about': dict(url='/about/', nav='/about/', type='AboutPage', crumbs=[('About', '/about/')],
         title='About SEA Audit | Independent Supported Housing Audits',
         desc='Who is behind SEA Audit, how every audit is carried out and graded by an auditor, and how we protect resident data under UK GDPR.'),
@@ -145,7 +151,7 @@ FOOTER = f'''<footer class="foot"><div class="wrap">
 <div><h2 class="h4">Company</h2><ul><li><a href="/about/">About and approach</a></li><li><a href="/book-a-call/">Book a call</a></li><li><a href="mailto:{EMAIL}">{EMAIL}</a></li></ul></div>
 </div>
 <div class="big" aria-hidden="true"><b>SEA</b> Audit</div>
-<div class="foot-base"><span>© 2026 {BRAND}. Supported exempt accommodation audits, England. Content reviewed {TODAY[8:].lstrip("0")} October 2026.</span><span><a href="/about/#privacy">Privacy</a> · <a href="/about/#privacy">Terms</a> · <button type="button" data-cookie-settings>Cookie settings</button></span></div>
+<div class="foot-base"><span>© 2026 {BRAND}. Supported exempt accommodation audits, England. Content reviewed {TODAY[8:].lstrip("0")} {MONTHS[int(TODAY[5:7])-1]} {TODAY[:4]}.</span><span><a href="/about/#privacy">Privacy</a> · <a href="/about/#privacy">Terms</a> · <button type="button" data-cookie-settings>Cookie settings</button></span></div>
 </div></footer>'''
 
 INTRO = f'<div class="intro" aria-hidden="true"><div class="ib">{mark()}<span class="iw"><span>SEA <em>Audit</em></span></span></div></div>'
@@ -196,7 +202,7 @@ def schema(key, cfg, body):
     if cfg['type'] == 'Article':
         cites = sorted(set(re.findall(r'href="(https://(?:www\.)?(?:legislation\.gov\.uk|gov\.uk|homeless\.org\.uk)[^"]*)"', body)))
         graph.append({'@type': 'Article', '@id': url + '#article', 'headline': cfg['headline'], 'description': cfg['desc'],
-                      'mainEntityOfPage': {'@id': url + '#page'}, 'datePublished': PUBLISHED, 'dateModified': TODAY,
+                      'mainEntityOfPage': {'@id': url + '#page'}, 'datePublished': cfg.get('published', PUBLISHED), 'dateModified': TODAY,
                       'inLanguage': 'en-GB', 'image': DOMAIN + '/assets/img/og.jpg', 'author': {'@id': DOMAIN + '/about/#jamie'},
                       'publisher': {'@id': DOMAIN + '/#org'}, 'spatialCoverage': {'@type': 'Country', 'name': 'England'},
                       'citation': cites})
@@ -262,7 +268,7 @@ def head(key, cfg, assets, body):
     t, d = html.escape(cfg['title']), html.escape(cfg['desc'])
     art = ''
     if cfg['type'] == 'Article':
-        art = (f'<meta property="article:published_time" content="{PUBLISHED}"><meta property="article:modified_time" content="{TODAY}">'
+        art = (f'<meta property="article:published_time" content="{cfg.get('published', PUBLISHED)}"><meta property="article:modified_time" content="{TODAY}">'
                '<meta name="author" content="Jamie McCollin">')
     verify = ''
     if BING_VERIFY:
@@ -409,6 +415,7 @@ Audits are desktop reviews of resident records, carried out remotely or at the p
 ## Guides
 - [Supported housing licensing explained]({DOMAIN}/resources/supported-housing-licensing/): the Supported Housing (Regulatory Oversight) Act 2023, the National Supported Housing Standards, who needs a licence and when
 - [What a good resident support file contains]({DOMAIN}/resources/resident-support-file/): the ten core documents, common gaps and a self-check
+- [Awaab's Law Phase 2 and support records]({DOMAIN}/resources/awaabs-law-support-records/): who is in scope, when the clock starts, the timescales and how support staff should log hazards
 - [Resources]({DOMAIN}/resources/): quick answers, key dates, a 22-term glossary and primary sources
 
 ## About and contact
